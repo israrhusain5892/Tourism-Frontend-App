@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primaryColor: hsl(14, 90%, 53%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.Carousel-Home {
+  position: relative;
+  height: 95vh;
+  width: 100%;
+  top: 0;
+}
+.Carousel-Home .Carousel-videoBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.Carousel-Home .Carousel-videoBg .carousel-video-tag {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Carousel-Home .Carousel-sectionText {
+  position: absolute;
+  height: 100%;
+  top: 30%;
+  bottom: 50%;
+  color: var(--whiteColor);
+  padding: 0 1.3rem;
+  text-align: center;
+}
+.Carousel-Home .Carousel-sectionText .carousel-h1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.Carousel-Home .Carousel-sectionText .carousel-h1 #orange {
+  color: #FF671F;
+}
+.Carousel-Home .Carousel-sectionText .carousel-h1 #blue {
+  color: #FFFFFF;
+}
+.Carousel-Home .Carousel-sectionText .carousel-h1 #green {
+  color: #046A38;
+}
+.Carousel-Home .Carousel-sectionText .carousel-para {
+  padding: 1rem 0;
+  font-size: var(--normalFontSize);
+  font-weight: 500;
+}
+.Carousel-Home .Carousel-sectionText .carousel-btn {
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: var(--h3FontSize);
+  margin: 0 auto;
+}
+.Carousel-Home .popularPlaces {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  .Carousel-Home .Carousel-sectionText {
+    padding: 0 2rem;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-h1 {
+    font-size: var(--biggestFontSize);
+    font-weight: 900;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-para {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-btn {
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .Carousel-Home .Carousel-sectionText {
+    width: 100%;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  .Carousel-Home .Carousel-sectionText.carousel-para {
+    padding: 1rem 0;
+    font-size: var(--h2FontSize);
+    max-width: 70%;
+    margin: auto;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-btn {
+    gap: 0.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: var(--h3FontSize);
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1040px) {
+  .Carousel-Home {
+    position: relative;
+  }
+  .Carousel-Home .Carousel-sectionText .carousel-h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    max-width: 70%;
+    margin: auto;
+  }
+  .Carousel-Home .popularPlaces {
+    display: block;
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Carousel-Home .popularPlaces .carousel-content h3 {
+    color: var(--whiteColor);
+    padding: 1rem 0;
+    position: relative;
+  }
+  .Carousel-Home .popularPlaces .carousel-content h3::after {
+    content: "";
+    width: 83%;
+    height: 2px;
+    background: rgb(202, 202, 202);
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+  }
+  .Carousel-Home .popularPlaces .carousel-content .carousel-images {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .Carousel-Home .popularPlaces .carousel-content .carousel-images .carousel-slide {
+    perspective: 100px;
+  }
+  .Carousel-Home .popularPlaces .carousel-content .carousel-images .carousel-slide-img {
+    width: 210px;
+    height: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  .Carousel-Home .popularPlaces .carousel-content .carousel-images .carousel-slide-img:hover {
+    transform: translateZ(15px);
+  }
+}/*# sourceMappingURL=Carousel-Home.css.map */

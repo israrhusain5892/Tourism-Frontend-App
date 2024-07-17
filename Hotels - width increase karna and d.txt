@@ -1,0 +1,2 @@
+Hotels -> width increase karna and details backend se render hona hey
+add karne ka baad history me dikhna hey

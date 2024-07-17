@@ -1,0 +1,236 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Tour and travel apitesting",
+    "collectionId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+    "dateExported": "2024-06-06T08:30:49.010Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f92fd90a-0708-410d-ae16-655c396071af",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "Country api testing",
+            "url": "https://tourism-and-travel-management-system.onrender.com/public/city/Telangana",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-30T14:44:42.892Z",
+            "modified": "2024-06-05T03:38:48.511Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"cityName\":\"Hyderabad\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4b100fa6-a41b-4f75-97df-6eeb10825ae6",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "add Tripcategory",
+            "url": "https://tourism-and-travel-management-system.onrender.com/public/tripCategory/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-30T20:36:20.711Z",
+            "modified": "2024-06-03T06:15:18.090Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n     \"categoryName\":\"Wildlife Sanctuaries\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "680c7410-6caa-4d14-8d3d-0fd393821366",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "ADD Trip",
+            "url": "https://tourism-and-travel-management-system.onrender.com/public/trip/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-04-30T21:20:51.276Z",
+            "modified": "2024-06-05T04:14:02.464Z",
+            "headers": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tripData",
+                        "value": "{ \"tripName\":\"Hussain Sagar\", \"tripAddress\":\"Hyderabad,Teloangana, India\" ,\"tripPrice\":13000}"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "tripPhoto",
+                        "value": "e:\\Telangana\\HussainSagar(SC).png"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "516e3a1a-0821-4876-8198-3ef3323a9b2b",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "Get Trip api",
+            "url": "https://tourism-and-travel-management-system.onrender.com/public/trip/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-30T21:51:52.267Z",
+            "modified": "2024-06-03T06:48:52.371Z",
+            "headers": []
+        },
+        {
+            "_id": "fe85cc0d-3e82-43d9-9898-36c747f52df3",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "Add user",
+            "url": "http://localhost:8081/auth/register",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-05-20T12:57:40.040Z",
+            "modified": "2024-05-27T09:13:31.703Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n     \"name\":\"Mohd Zeeshan\",\n     \"mobileNumber\":\"9759369254\",\n     \"email\":\"zeeshan589@gmail.com\",\n     \"password\":\"Zeshan@123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "861e70f3-6cb0-4524-830e-6062bc6e5eab",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "add user1",
+            "url": "http://localhost:8090/auth/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-05-21T09:23:40.290Z",
+            "modified": "2024-05-27T06:57:49.006Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpc3Jhcmh1c2FpbjU4OTJAZ21haWwuY29tIiwiaWF0IjoxNzE2MzU3MjE4LCJleHAiOjE3MzE5MDkyMTh9.ANtA61L6gHYhwI1ez0yIq4xTHSIB_LYDPOCrmBxDRCxEmZvPvh58rIm5yi8VrPpElw85m2y8O2LipHtSflzROQ",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"email\":\"israrhusain5892@gmail.com\",\n    \"password\":\"Israr@124\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "679f2d2e-31aa-459b-8c9d-b353be795362",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "login api",
+            "url": "http://localhost:8081/auth/login",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-05-22T05:06:03.172Z",
+            "modified": "2024-05-27T12:20:58.339Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Authorization",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n     \"email\":\"zeeshan589@gmail.com\",\n     \"password\":\"Zeshan@123\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9b5cdbcd-13f2-46ce-b089-08ab123c1ec0",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "api",
+            "url": "http://localhost:8081/auth/login",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-05-22T13:10:57.988Z",
+            "modified": "2024-05-23T15:06:45.749Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n    \"email\":\"israrhusain@gmail.com\",\n    \"password\":\"Israr@786\"\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5eac49af-7f67-414d-933e-618425d98c83",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "get api",
+            "url": "https://tourism-and-travel-management-system.onrender.com/user/get/",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-05-23T02:08:52.552Z",
+            "modified": "2024-05-26T09:05:11.681Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpc3Jhcmh1c2FpbkBnbWFpbC5jb20iLCJpYXQiOjE3MTY0MzYxNTYsImV4cCI6MTcxNjQ1NDE1Nn0.smGZ0Ak-Zs1FKzG4hx8LcDPvCoedahJ_SraOzalawJLHLKBxWEBePwioopecFE7QjwsncG7x6uoH1wN9ddx3mQ",
+                    "isDisabled": true
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpc3Jhcmh1c2FpbkBnbWFpbC5jb20iLCJpYXQiOjE3MTY0NTM4NTAsImV4cCI6MTcxNjQ3MTg1MH0.ZUeRmFICrt83wjNmEFMI3nrGxUGRRB0-oGE14GOkwE1Gs1OrutMUwf1rl50SYWSVMS6jgVGnW-5KDEp-JgDx5A"
+            }
+        },
+        {
+            "_id": "cc8aaeb2-4871-4635-b31f-2c4d51d0f427",
+            "colId": "2b1ce4cd-a6d7-42b3-b000-8995329c57a4",
+            "containerId": "",
+            "name": "otp testing",
+            "url": "http://localhost:8082/api/otp/generate?mobileNumber=9897857957",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-06-05T08:15:23.107Z",
+            "modified": "2024-06-05T08:16:46.395Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "mobileNumber",
+                    "value": "9897857957",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "8rpg0hOJcE81SL2YPsC04D_kZG0EdTQZMV8izkkhHikBmaJO5Je5kv1C26KwXCYAwb4b1ABa2wcFesBF7DBWEg"
+}

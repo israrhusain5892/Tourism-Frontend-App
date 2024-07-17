@@ -1,0 +1,247 @@
+{
+    "Odisha": {
+      "Beaches": [
+        {
+          "name": "Puri Beach",
+          "location": "Puri",
+          "description": "Famous beach known for its golden sands and religious significance.",
+          "image": "https://media.istockphoto.com/id/1169379447/photo/dynamic-golden-sea-beach-at-puri-odisha-india.jpg?s=612x612&w=0&k=20&c=-2SxhB0znREZNPazDU0j8EiUVLkr1a91yZMVOGnxAWI="
+        },
+        {
+          "name": "Chandrabhaga Beach",
+          "location": "Konark",
+          "description": "Scenic beach near Konark Sun Temple offering breathtaking views.",
+          "image": "https://media.istockphoto.com/id/615502000/photo/aerial-view-of-the-beach-from-the-shallow-water.jpg?s=612x612&w=0&k=20&c=ueNmk1vvDkTY_OMHYOuK1aYVKQpWSHXmprESNQDUHz4="
+        },
+        {
+          "name": "Gopalpur Beach",
+          "location": "Ganjam",
+          "description": "Quiet beach ideal for relaxation and water sports.",
+          "image": "https://media.istockphoto.com/id/835881816/photo/gopalpur-sea-beach.jpg?s=612x612&w=0&k=20&c=uAePyIS_K2KSzOcsSXUBVt5IaxwPelRui6wwqLuWfNE="
+        }
+      ],
+      "National Parks": [
+        {
+          "name": "Simlipal National Park",
+          "location": "Mayurbhanj",
+          "description": "One of the largest national parks in India, known for its biodiversity.",
+          "image": "https://thumbs.dreamstime.com/b/palpala-river-near-lulung-similipal-national-park-orissa-long-exposure-shot-used-191508763.jpg?w=992"
+        },
+        {
+          "name": "Bhitarkanika National Park",
+          "location": "Kendrapara",
+          "description": "Famous for its mangrove forests, crocodiles, and migratory birds.",
+          "image": "https://media.istockphoto.com/id/1393391582/photo/hiking-inside-forest.jpg?s=612x612&w=0&k=20&c=CuZZbEDcUelUyC7Fny7uFYAZAZytx55aEMOdYBEVCzo="
+        },
+        {
+          "name": "Chilika Lake",
+          "location": "Puri, Khordha, and Ganjam",
+          "description": "Asia's largest brackish water lagoon, known for bird watching and boating.",
+          "image": "https://media.istockphoto.com/id/1218923067/photo/fishing-boat-and-landscape-at-chilika-lake-odisha-india.jpg?s=612x612&w=0&k=20&c=rBYy4f-JHz5hvBSYm_CgCr9OjJwgwEt6vgU-F_7LXms="
+        }
+      ],
+      "Historical Sites": [
+        {
+          "name": "Konark Sun Temple",
+          "location": "Konark",
+          "description": "13th-century temple dedicated to the Sun God, a UNESCO World Heritage Site.",
+          "image": "https://media.istockphoto.com/id/1323524692/photo/crowd-of-tourist-at-konark-sun-temple-indian-tourism-place.jpg?s=612x612&w=0&k=20&c=wu3FI2CCn0L5k_SR6m5AvN_Y9xx1JDD5CUdHFsp5xgI="
+        },
+        {
+          "name": "Jagannath Temple",
+          "location": "Puri",
+          "description": "One of the four Char Dham pilgrimage sites, dedicated to Lord Jagannath.",
+          "image": "https://thumbs.dreamstime.com/b/famous-lord-jagannath-temple-puri-night-colorful-sky-background-attractive-famous-lord-jagannath-temple-puri-night-174558938.jpg?w=768"
+        },
+        {
+          "name": "Udayagiri and Khandagiri Caves",
+          "location": "Bhubaneswar",
+          "description": "Ancient Jain rock-cut shelters dating back to the 2nd century BCE.",
+          "image": "https://media.istockphoto.com/id/1444930725/photo/archeological-ruins-of-udayagiri-caves-built-during-the-1st-century-bce-at-bhubaneswar-odisha.jpg?s=612x612&w=0&k=20&c=yARDIxxEbZjDCizVAz2yIgzkSQuTjKXrfNt75m4SOLY="
+        }
+      ]
+    },
+    "Chhattisgarh": {
+      "Waterfalls": [
+        {
+          "name": "Chitrakote Falls",
+          "location": "Jagdalpur",
+          "description": "Widest waterfall in India, also called the 'Niagara Falls of India.'",
+          "image": "https://media.istockphoto.com/id/1336468918/photo/broadest-waterfalls-in-india-chitrakoot-or-chitrakote-falls-chhattisgarh-india-located-near.jpg?s=612x612&w=0&k=20&c=qSTDoira6n2zz9MLj4Um6lch6WTvEtHiigLTt6kZZ4U="
+        },
+        {
+          "name": "Tirathgarh Falls",
+          "location": "Jagdalpur",
+          "description": "Beautiful tiered waterfall surrounded by lush greenery.",
+          "image": "https://media.istockphoto.com/id/1183089474/photo/tirathgarh-waterfall.jpg?s=612x612&w=0&k=20&c=qnfKob_gkNGJ_EJYjcwk1VJ-xp3AMvqJs7SZgO9jleQ="
+        },
+        {
+          "name": "Amrit Dhara Waterfall",
+          "location": "Koriya",
+          "description": "Scenic waterfall located in the Koriya district.",
+          "image": "https://media.istockphoto.com/id/1170323719/photo/beautiful-waterfall-in-athirappalli-kerala-india.jpg?s=612x612&w=0&k=20&c=9e8yf8TsbN33YGBEl2DQ-h2DAlTxYZDGDjZ8QX2_KDI="
+        }
+      ],
+      "Caves": [
+        {
+          "name": "Kanger Ghati National Park",
+          "location": "Bastar",
+          "description": "Home to ancient caves with prehistoric rock paintings.",
+          "image": "https://media.istockphoto.com/id/1269452800/photo/morning-sunrise-view-from-mountain-top-mountains-range-in-summer-season-siri-paye-meadows.jpg?s=612x612&w=0&k=20&c=sYQn7EWWg3oixN3bWerouuoT3B1YZ_7L_ztuFT92Ji4="
+        },
+        {
+          "name": "Kutumsar Caves",
+          "location": "Jagdalpur",
+          "description": "Limestone caves known for their stalactites and stalagmites formations.",
+          "image": "https://media.istockphoto.com/id/1215216414/photo/golden-statues-and-figurines-of-buddha-in-the-pindaya-caves.jpg?s=612x612&w=0&k=20&c=k8b_bcSt7w35IeCQtHffo55zERnRalHBnsePwLF3hSU="
+        },
+        {
+          "name": "Dandak Caves",
+          "location": "Bastar",
+          "description": "Limestone caves located in the Kanger Valley National Park.",
+          "image": "https://media.istockphoto.com/id/483905020/photo/colorful-of-huanglong-cave-in-china.jpg?s=612x612&w=0&k=20&c=KaZw8QugJKPwjvSgPBIVhOWlx9ejRrYo03agBT_0uXI="
+        }
+      ],
+      "Wildlife Sanctuaries": [
+        {
+          "name": "Barnawapara Wildlife Sanctuary",
+          "location": "Mahasamund",
+          "description": "Known for its diverse flora and fauna, including leopards and tigers.",
+          "image": "https://media.istockphoto.com/id/1694587222/photo/wetlands-a-view.jpg?s=612x612&w=0&k=20&c=N9fJF3o7wVSydyiSekhTcQ2-I4VUBcgyC9AFBx2DsaI="
+        },
+        {
+          "name": "Sitanadi Wildlife Sanctuary",
+          "location": "Dhamtari",
+          "description": "Rich in wildlife with dense forests and scenic beauty.",
+          "image": "https://media.istockphoto.com/id/1182308780/photo/wild-geese-and-ducks-on-the-azmak-river-from-akyaka-town-in-turkey.jpg?s=612x612&w=0&k=20&c=5a5YEGBdKzq7-Yxbxa-Y--LsJPrcxd5S6RfsrRmnys4="
+        },
+        {
+          "name": "Udanti Wildlife Sanctuary",
+          "location": "Gariaband",
+          "description": "Famous for its population of the endangered wild buffalo.",
+          "image": "https://media.istockphoto.com/id/1392271943/photo/a-flock-of-white-pelicans.jpg?s=612x612&w=0&k=20&c=hMEdchRgaan50SDwAFYHTJCg_8rrdW600ZqctN5XMJE="
+        }
+      ],
+      "Historical Sites": [
+        {
+          "name": "Sirpur",
+          "location": "Mahasamund",
+          "description": "Ancient town known for its archaeological and historical significance.",
+          "image": "https://media.istockphoto.com/id/1997267878/photo/view-of-surang-tila-temple-built-with-dress-stone-blocks-sirpur-mahasamund-chhattisgarh-india.jpg?s=612x612&w=0&k=20&c=9DxHl4kUDWDv25L0aRnVI9Ors-W3PFJawTZJp28XRH0="
+        },
+        {
+          "name": "Kanker Palace",
+          "location": "Kanker",
+          "description": "Historic palace offering a glimpse into royal life and heritage.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eZvzV5wDema4X-qulDoZ3pqBaNS4gnIoY-URPU6eHtsiTITlK8fO4MBLaQ&s"
+        },
+        {
+          "name": "Ratanpur",
+          "location": "Bilaspur",
+          "description": "Historic town known for the ancient Mahamaya Temple.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQshOxxqtKS7gdQ-Vc-keDnScwIh5qPHYfzC_-6op4RTA&s"
+        }
+      ]
+    },
+    "Uttarakhand": {
+      "Hill Stations": [
+        {
+          "name": "Nainital",
+          "location": "Nainital district",
+          "description": "Famous hill station known for its picturesque lake and surrounding hills.",
+          "image": "https://media.istockphoto.com/id/1267723790/photo/beautiful-and-colourful-city-view-nainital-uttarakhand.jpg?s=612x612&w=0&k=20&c=nDVKK1Roj5Gd3nEy5iZ8MwZPja1CcTY1FhbX155zofQ="
+        },
+        {
+          "name": "Mussoorie",
+          "location": "Dehradun district",
+          "description": "Popular hill station offering stunning views of the Himalayas.",
+          "image": "Mussooriehttps://media.istockphoto.com/id/1214520904/photo/mountain-view-in-mussoorie-dehradun-uttarakhand.jpg?s=612x612&w=0&k=20&c=LuJAzFaitUeiyPmCtdV2areP0qTqQo7GlSHxK56N6Z8="
+        },
+        {
+          "name": "Auli",
+          "location": "Chamoli district",
+          "description": "Skiing destination known for its snow-capped peaks and scenic views.",
+          "image": "https://media.istockphoto.com/id/1255138914/photo/top-hill-view-of-auli-uttarakhand-india.jpg?s=612x612&w=0&k=20&c=3MNCH1VfdFl4UA5lhrvyKp8MXoNMLN8eixGKD6LuiaU="
+        },
+        {
+          "name": "Ranikhet",
+          "location": "Almora district",
+          "description": "Hill station known for its scenic beauty and ancient temples.",
+          "image": "https://media.istockphoto.com/id/2151837885/photo/himalayan-villages.jpg?s=612x612&w=0&k=20&c=L5JilluZZKFTRcICgZWJAiwFER4BvqQCWjoAuf__zXk="
+        }
+      ],
+      "Trekking Spots": [
+        {
+          "name": "Valley of Flowers",
+          "location": "Chamoli district",
+          "description": "UNESCO World Heritage Site known for its diverse alpine flora.",
+          "image": "https://media.istockphoto.com/id/1307342932/photo/valley-of-flowers.jpg?s=612x612&w=0&k=20&c=ANlvTJ_RrcefT2duJuZZWpyxx4a2tunAE5v4Mi-JFzg="
+        },
+        {
+          "name": "Roopkund Lake",
+          "location": "Chamoli district",
+          "description": "Mystery lake famous for its skeletal remains and trekking.",
+          "image": "https://media.istockphoto.com/id/1462527772/photo/roopkund-lake-with-high-cliffs-covered-in-snow-in-the-background-in-india.jpg?s=612x612&w=0&k=20&c=pXLC_VikiJlU3l6ngsEEDgdFsWJclMLZBbzoVKopuPY="
+        },
+        {
+          "name": "Kedarkantha",
+          "location": "Uttarkashi district",
+          "description": "Popular winter trek offering panoramic views of snow-clad mountains.",
+          "image": "https://media.istockphoto.com/id/1204207370/photo/a-shiva-temple-on-kedarkantha-mountain-summit.jpg?s=612x612&w=0&k=20&c=9dKij5AnM3JW-rtm0nCNr-x43UBpeC8MhgAAyPP7tYs="
+        },
+        {
+          "name": "Har Ki Dun",
+          "location": "Uttarkashi district",
+          "description": "Famous trekking destination with panoramic views of the Himalayas.",
+          "image": "https://media.istockphoto.com/id/1547773348/photo/beautiful-view-from-kalkatiyadhar-view-point-at-har-ki-dun.jpg?s=612x612&w=0&k=20&c=GQT8RjnKOR169hoKzDpyvAPZpKIEAB_HG2Wq9avLK9A="
+        }
+      ],
+      "Pilgrimage Sites": [
+        {
+          "name": "Kedarnath Temple",
+          "location": "Rudraprayag district",
+          "description": "One of the most revered Hindu temples dedicated to Lord Shiva.",
+          "image": "https://media.istockphoto.com/id/515855602/photo/kedarnath-in-india.jpg?s=612x612&w=0&k=20&c=_KmnQbbvqRftKusDTU_JUjVM3V80Mo2jBqaCNx948us="
+        },
+        {
+          "name": "Badrinath Temple",
+          "location": "Chamoli district",
+          "description": "Sacred temple dedicated to Lord Vishnu, part of the Char Dham Yatra.",
+          "image": "https://media.istockphoto.com/id/1251156350/photo/badrinath-temple.jpg?s=612x612&w=0&k=20&c=x-bVZfAHl9lGE0nBE03Zxk7SSBt4xuOoew0NTjxy0dk="
+        },
+        {
+          "name": "Haridwar",
+          "location": "Haridwar district",
+          "description": "Ancient city and important pilgrimage site located on the banks of the Ganges.",
+          "image": "https://media.istockphoto.com/id/458237899/photo/kumbh-mela-in-haridwar.jpg?s=612x612&w=0&k=20&c=PkjlCGNP0BgGslwoi1jF5IhdX7TsVPQ7taiKOvhmEgU="
+        },
+        {
+          "name": "Rishikesh Temple",
+          "location": "Dehradun district",
+          "description": "Known as the 'Yoga Capital of the World' and a major pilgrimage site.",
+          "image": "https://media.istockphoto.com/id/1302237529/photo/stunning-view-of-the-ganga-river-embankment-with-the-lakshman-jhula-bridge-and-tera-manzil.jpg?s=612x612&w=0&k=20&c=LQ3Pnaegh-UXQ08ZJB_JUNHHW7333xeQUUbT8kDccEo="
+        }
+      ],
+      "National Parks": [
+        {
+          "name": "Jim Corbett National Park",
+          "location": "Nainital district",
+          "description": "Oldest national park in India, known for its tiger reserve.",
+          "image": "https://media.istockphoto.com/id/1287385395/photo/wild-female-bengal-tiger-walking-head-on-to-safari-vehicles-full-with-tourists-or-wildlife.jpg?s=612x612&w=0&k=20&c=4V05dqW4loNL1n2FpXoN0mgbqZQQlvIhk0Tgwj128Jk="
+        },
+        {
+          "name": "Rajaji National Park",
+          "location": "Haridwar, Dehradun, and Pauri Garhwal districts",
+          "description": "Known for its rich biodiversity and elephant population.",
+          "image": "https://media.istockphoto.com/id/1392286942/video/wild-asian-elephant-or-tusker-family-or-herd-in-action-drinking-water-or-quenching-thirst.jpg?s=640x640&k=20&c=F6i56SzTCNG9pZohyB7vljhV58TGuaottQ6AF6GHhUQ="
+        },
+        {
+          "name": "Gangotri National Park",
+          "location": "Uttarkashi district",
+          "description": "Known for its scenic beauty and the origin of the Ganges River.",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs_bi2om5wvzj-jCTLLl7j-fVigv8UiEldwAkMDxdC_d3nv94HGQ7RNN3VRpQpIHN36Qc&usqp=CAU"
+        }
+      ]
+    }
+  }
+  

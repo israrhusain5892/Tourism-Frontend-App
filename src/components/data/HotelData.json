@@ -1,0 +1,329 @@
+{
+    "stateName":"Tripura",
+    "cities":[ 
+    {
+        "cityName":"Agartala",
+        "hotelRating":[
+            {
+                "hotelRating":"5 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Hotel Polo Towers",
+                        "hotelImage": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202010120846031922-44c4b66aa20f11eba69e0242ac110002.jpg",
+                        "hotelAddress": "VIP Rd, Kunjaban, Agartala, Tripura 799006",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"5000 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"6000 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"7000 per night"
+                            }
+                        ]
+                    },
+                    {
+                        "hotelName": "Hotel Rajdhani",
+                        "hotelImage": "https://content.jdmagicbox.com/comp/agartala/88/9999pmulkolstd10288/catalogue/rajdhani-hotel-agartala-ho-agartala-hotels-rs-1001-to-rs-2000--t96y6.jpg",
+                        "hotelAddress": "Near Rajdhani Ghat, Palace Compound, Agartala, Tripura 799001",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"5500 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"6500 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"7500 per night"
+                            }
+                        ]
+                    },
+                    {
+                        "hotelName": "Hotel Sonar Tori",
+                        "hotelImage": "https://lh3.googleusercontent.com/p/AF1QipOHRlzFqR3es0ITcsxc8c71NW4H_Mym5ZdET3WT=s1360-w1360-h1020",
+                        "hotelAddress": "Near Jagannath Bari, Agartala, Tripura 799001",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"4800 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"5800 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"6800 per night"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "hotelRating":"3 Star",
+                "hotels":[
+                    {
+                        "hotelName": "The Parkline Hotel",
+                        "hotelImage": "https://lh3.googleusercontent.com/p/AF1QipMsKOfZCYPd1cwjXteP5Y-5LMNWvE02feRn65Bx=s1360-w1360-h1020",
+                        "hotelAddress": "R7MJ+J4V, Palace Compound, Indranagar, Parkline, Agartala, Tripura 799001",
+                        "prices": [
+                            {
+                                    
+                                            "roomType":"Standard",
+                                        "price":"2200 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"2800 Rs per night"
+                            } 
+                            
+                        ]
+                    },
+                    {
+                        "hotelName": "Hotel City Centre",
+                        "hotelImage": "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_mobileactualimage/v1010064100/Hotel/Agartala/00002615/1_BOUV5B.jpg",
+                        "hotelAddress":"Hari Ganga Basak Road, Madhyapara Rd, Melarmath, Dhaleswar, Agartala, Tripura 799001",
+                        "prices": [
+                            {
+                                    
+                                            "roomType":"Standard",
+                                        "price":"2100 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"2700 Rs per night"
+                            } 
+                            
+                        ]
+                    }
+                ]
+            }
+
+
+        
+        ]
+    },
+    {
+        "cityName":"Udaipur",
+        "hotelRating":[
+            {
+                "hotelRating":"4 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Hotel Sonar Tori",
+                        "hotelImage": "https://lh3.googleusercontent.com/p/AF1QipOHRlzFqR3es0ITcsxc8c71NW4H_Mym5ZdET3WT=s1360-w1360-h1020",
+                        "hotelAddress": "Sonar Tori, College Tilla, Udaipur, Tripura 799120",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"4000 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"5000 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"7000 per night"
+                            }
+                        ]
+                    },
+                    {
+                        "hotelName": "Hotel Green Valley",
+                        "hotelImage": "https://gos3.ibcdn.com/5455ab8c26ec11eb858b0242ac110003.jpg",
+                        "hotelAddress": "College Tilla, Udaipur, Tripura 799120",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"4500 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"5500 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"7500 per night"
+                            }
+                        ]
+                    },
+                    {
+                        "hotelName": "Hotel City View",
+                        "hotelImage": "https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/202206211218261521-84ec433a09dc11eda7ac0a58a9feac02.jpg",
+                        "hotelAddress": "Palace Compound, Udaipur, Tripura 799120",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"4200 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"5200 Rs per night"
+                            },
+                            {
+                                "roomType":"Deluxe",
+                                "price":"7200 per night"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "hotelRating":"3 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Avins Beacon Hotel",
+                        "hotelImage": "https://cf2.bstatic.com/xdata/images/hotel/max1024x768/123703617.jpg?k=eba0b2199610995363dae84c926d55a5161a624e006be71e4b2c7c6eb7fe2348&o=&hp=1",
+                        "hotelAddress": "24 Ashok Nagar,Near Maharashtra Bhavan, 313001 Udaipur, India",
+
+                        "prices": [
+                            {
+                                    
+                                            "roomType":"Standard",
+                                        "price":"2000 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"3000 Rs per night"
+                            } 
+                            
+                        ]
+                    },
+                    {
+                        "hotelName": "Jag Aravali Resort",
+                        "hotelImage": "https://cf2.bstatic.com/xdata/images/hotel/max1024x768/530976877.jpg?k=67fe897c6e5674636fc23afd8a255ccec31d799a15da978b51e3ff8e4edbfc91&o=&hp=1",
+                        "hotelAddress": "near govt school naya gurha kodiyat main road,udaipur,rajasthan, 313031 Udaipur, India",
+                
+
+                        "prices": [
+                            {
+                                    
+                                            "roomType":"Standard",
+                                        "price":"2300 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"3000 Rs per night"
+                            } 
+                            
+                        ]
+                    }
+                ]
+            }
+
+
+        
+        ]
+    },
+    {
+        "cityName":"Belonia",
+        "hotelRating":[
+            {
+                "hotelRating":"5 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Lake Side Resort Neermahal",
+                        "hotelImage": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/e0/28/96/polo-lake-resort-sagarmahal.jpg?w=1100&h=-1&s=1",
+                        "hotelAddress": "Rajghat Road, Melaghar 799115 India",
+                        "prices": [
+                            {
+                                    
+                                            "roomType":"Luxury Deluxe",
+                                        "price":"2600 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"Executive Deluxe",
+                                        "price":"3200 Rs per night"
+                            },
+                            {
+                                "roomType":"Presidential Deluxe",
+                                "price":"3800 per night"
+                            }
+                        ]
+                    }
+                    
+                ]
+            },
+            {
+                "hotelRating":"4 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Muhuri Tourist Lodge",
+                        "hotelImage": "https://lh3.googleusercontent.com/p/AF1QipMkAkhm6LjvdaHki3dLh3pyu-uGc47RPQ6Gi1up=w574-h384-n-k-rw-no-v1",
+                        "hotelAddress": "7F7H+P8Q, Belonia, Tripura 799155",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"3000 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"3800 Rs per night"
+                            },
+                            {
+                                "roomType":"Executive Room",
+                                "price":"4500 per night"
+                            }
+                        ]
+                    }
+                    
+                ]
+            },
+            {
+                "hotelRating":"3 Star",
+                "hotels":[
+                    {
+                        "hotelName": "Hotel Shome's",
+                        "hotelImage": "https://images.jdmagicbox.com/comp/south_tripura/e6/9999p3823.3823.220130003148.y7e6/catalogue/hotel-shome-s-south-tripura-hotels-1h4gmw6zij-250.jpg?w=1920&q=75",
+                        "hotelAddress": "Beloniya, South Tripura - 799155 (Near No 1 Tilla, Belonia)",
+                        "prices": [
+                            {
+                                    
+                                        "roomType":"Standard",
+                                        "price":"2500 Rs per night"
+                                
+                            },
+                            {
+                                        "roomType":"AC",
+                                        "price":"3500 Rs per night"
+                            }
+                        ]
+                           
+                        }
+                    ]
+                    
+                    }
+                    
+                ]
+            }
+
+
+        
+        ]
+    }
