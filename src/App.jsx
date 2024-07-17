@@ -30,7 +30,7 @@ import Adminmain from "./components/Admin/Adminmain";
 import 'remixicon/fonts/remixicon.css';
 import HotelBooking from './components/pages/HotelBookingpage'
 import HotelPayment from "./components/pages/HotelPayment";
-import HotelTicket from "./components/pages/HotelTicket";
+// import HotelTicket from "./components/pages/HotelTicket";
 
 const queryClient = new QueryClient();
 
@@ -55,7 +55,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/payment" element={<HotelPayment/>}/>
-              <Route path="/ticket" element={<HotelTicket/>}/>
+              {/* <Route path="/ticket" element={<HotelTicket/>}/> */}
               <Route path="/admin">
                 <Route path="tripform" element={<TripForm />} />
                 <Route path="tripview" element={<TripViewPage />} />

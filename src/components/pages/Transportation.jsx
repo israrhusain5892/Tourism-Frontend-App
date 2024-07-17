@@ -7,7 +7,7 @@ import ReactPaginate from 'react-paginate';
 import apiUrl from '../../Axios';
 import TransportCarousel from "./TransportCarousel";
 import Navbar from "../Navbar/Navbar";
-
+import Loader from '../Loader';
 const TransportCards = () => {
     const [transports, setTransports] = useState([]);
     const [allTransports, setAllTransports] = useState([]);
@@ -200,7 +200,7 @@ const TransportCards = () => {
     return (
         <>
             <Navbar />
-            
+            {loading && <Loader/>}
             <TransportCarousel />
             <div className="p-4 bg-gray-100 min-h-screen">
                 <h2 className="text-5xl mt-8 font-bold text-center text-[#600180] mb-8">Available Transport</h2>

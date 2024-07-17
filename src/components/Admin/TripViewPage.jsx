@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri';
-import Loader from '../Loader';
+// import Loader from '../Loader';
 import apiUrl from '../../Axios';
 
 import Admin from './Admin';

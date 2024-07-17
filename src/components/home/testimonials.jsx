@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Raj from '../../components/assets/Raj_Kumar.jpg'
 import Neha from '../../components/assets/Neha_Sharma.jpg'
 import Priya from '../../components/assets/Priya_Gupta.jpg'
-import Aditya from '../../components/assets/Aditya_Kapoor.jpg'
 import Sadiq from '../../components/assets/Sadiq_Basha.jpg'
 import Nayum from '../../components/assets/Nayum.jpg'
 import Aisha from '../../components/assets/Aisha.jpg'
@@ -12,13 +10,7 @@ import { Link } from 'react-router-dom';
 
 const TestimonialsSlider = () => {
     const testimonials = [
-        {
-            quote: "I was impressed by the attention to detail and the personalized service provided by the Indian tourism website. They made sure we experienced the true essence of India during our trip.",
-            author: "Raj Kumar",
-            city: "Delhi",
-            image: Raj,
-            rating: 5
-        },
+       
         {
             quote: "The team at the Indian tourism website was incredibly helpful in planning our trip. They tailored the itinerary to our preferences and made sure we had an unforgettable experience.",
             author: "Neha Sharma",
@@ -33,13 +25,7 @@ const TestimonialsSlider = () => {
             image: Priya,
             rating: 3.5
         },
-        {
-            quote: "The Indian tourism website made planning our trip to India a breeze. They took care of all the logistics and recommended the best places to visit. We had an amazing time and can't wait to go back.",
-            author: "Aditya Kapoor",
-            city: "Chennai",
-            image: Aditya,
-            rating: 1.5
-        },
+        
         {
             quote: "The tour package was amazing! The guides were knowledgeable and the itinerary was well-planned. I had a wonderful time exploring the cultural and historical sights of India.",
             author: "Sadiq Basha",

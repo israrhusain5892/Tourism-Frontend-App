@@ -217,9 +217,11 @@ function HotelPayment() {
 
     return (
         <div>
-            {loading && <><Loader /></>}
+           {loading && <Loader />}
             <Navbar />
+           
             <div className='mx-auto w-[1200px] border mt-36 px-4 shadow-xl py-4 rounded'>
+            
                 <div className='flex gap-16 '>
                     {bookingDetails && (
                         <>
@@ -245,7 +247,7 @@ function HotelPayment() {
                 </button>
                 <button onClick={submitPayment} className='px-6 py-2 mt-4 bg-blue-600 text-xl rounded-md text-white text-center block mx-auto'>Pay Now</button>
                 
-               <HotelTicket ref={contentRef} bookingDetails={bookingDetails} />
+               <HotelTicket ref={contentRef} payment={paymentData} />
         
             </div>
         </div>

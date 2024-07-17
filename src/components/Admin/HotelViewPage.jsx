@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { RiArrowLeftSLine, RiArrowRightSLine, RiDeleteBin2Fill } from 'react-icons/ri';
 import { FaTrash, FaEdit } from 'react-icons/fa'
-import Loader from '../Loader';
+// import Loader from '../Loader';
 import Admin from './Admin';
 import apiUrl from '../../Axios';
 import Swal from 'sweetalert2';

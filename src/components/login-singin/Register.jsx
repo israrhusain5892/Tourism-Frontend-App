@@ -4,7 +4,8 @@ import loginimg from "../assets/login_img.png";
 import emailjs from "emailjs-com";
 import apiUrl from "../../Axios";
 import Swal from "sweetalert2";
-
+import Loader from "../Loader";
+import Navbar from "../Navbar/Navbar";
 const Register = () => {
     const navigate = useNavigate();
     const [error, setError] = useState("");
@@ -15,6 +16,7 @@ const Register = () => {
         password: "",
         confirmPassword: "",
     });
+    const [loading, setLoading] = useState(false);
     const [otp, setOtp] = useState("");
     const [inputOtp, setInputOtp] = useState("");
     const [buttonLabel, setButtonLabel] = useState("Generate OTP");
@@ -40,18 +42,22 @@ const Register = () => {
         // Name
         if (!formData.name) {
             formIsValid = false;
+            setLoading(false)
             errors.name = "Name cannot be empty";
         } else if (formData.name.length < 3 || formData.name.length > 20) {
             formIsValid = false;
+            setLoading(false)
             errors.name = "Name must be between 3 and 20 characters long";
         }
 
         // Mobile
         if (!formData.mobileNumber) {
             formIsValid = false;
+            setLoading(false)
             errors.mobileNumber = "Mobile number cannot be empty";
         } else if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
             formIsValid = false;
+            setLoading(false)
             errors.mobileNumber =
                 "Invalid mobile number. It should start with 9, 8, 7, or 6 and be 10 digits long";
         }
@@ -59,24 +65,30 @@ const Register = () => {
         // Email
         if (!formData.email) {
             formIsValid = false;
+            setLoading(false)
             errors.email = "Email cannot be empty";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             formIsValid = false;
+            setLoading(false)
             errors.email = "Invalid email address";
         }
 
         // Password
         if (!formData.password) {
             formIsValid = false;
+            setLoading(false)
             errors.password = "Password cannot be empty";
         } else if (
+           
             !/(?=.*[a-z])/.test(formData.password) || // at least one lowercase letter
             !/(?=.*[A-Z])/.test(formData.password) || // at least one uppercase letter
             !/(?=.*\d)/.test(formData.password) || // at least one number
             !/(?=.*[@$!%*?&])/.test(formData.password) || // at least one special character
             formData.password.length < 8 // at least 8 characters long
+           
         ) {
             formIsValid = false;
+            setLoading(false);
             errors.password =
                 "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character";
         }
@@ -84,9 +96,10 @@ const Register = () => {
         // Confirm Password
         if (formData.password !== formData.confirmPassword) {
             formIsValid = false;
+            setLoading(false);
             errors.confirmPassword = "Passwords do not match";
         }
-
+        setLoading(false);
         setErrors(errors);
         return formIsValid;
     };
@@ -136,6 +149,7 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         if (handleValidation()) {
             try {
                 const response = await fetch(`${apiUrl}/auth/register`, {
@@ -148,6 +162,7 @@ const Register = () => {
 
                 const result = await response.json();
                 if (response.ok) {
+                    setLoading(false);
                     Swal.fire(
                         'Registration Successful',
                         'You have been registered successfully.',
@@ -156,6 +171,7 @@ const Register = () => {
                         navigate("/login");
                     });
                 } else {
+                    setLoading(false);
                     Swal.fire(
                         'Error',
                         result.error,
@@ -163,6 +179,7 @@ const Register = () => {
                     );
                 }
             } catch (error) {
+                setLoading(false);
                 Swal.fire(
                     'Error',
                     'Error submitting form. Please try again later.',
@@ -170,6 +187,7 @@ const Register = () => {
                 );
             }
         } else {
+            setLoading(false);
             Swal.fire(
                 'Error',
                 'Form has errors. Please correct them and try again.',
@@ -180,6 +198,8 @@ const Register = () => {
 
     return (
         <section>
+            <Navbar/>
+           {loading && <Loader/>} 
             <div className="h-full">
                 <div className="flex h-full flex-wrap items-center justify-center lg:justify-between">
                     <div className="shrink-1 mb-2 mt-12 grow-0 basis-auto md:mt-16 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">

@@ -3,7 +3,7 @@ import Navbar from "../Navbar/Navbar";
 import logo from '../assets/logo2.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useRef, forwardRef, useImperativeHandle,backwardRef } from 'react';
+import { useRef, forwardRef, useImperativeHandle} from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import emailjs from 'emailjs-com';
@@ -14,7 +14,7 @@ import { useState } from 'react';
 
 
 
-const HotelTicket=(({payment}, ref) =>{
+const HotelTicket=forwardRef(({payment}, ref) =>{
   
   
   const contentRef = useRef();

@@ -9,7 +9,7 @@ import Modal from 'react-bootstrap/Modal';
 import TripForm from './TripForm';
 import TripViewPage from './TripViewPage';
 import photo from '../assets/Aditya_kapoor.jpg';
-import Loader from '../Loader';
+// import Loader from '../Loader';
 import 'remixicon/fonts/remixicon.css';
 import { Link } from 'react-router-dom';
 import HotelForm from './HotelForm';

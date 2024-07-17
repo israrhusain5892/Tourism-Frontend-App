@@ -11,7 +11,7 @@ import { Typewriter } from "react-simple-typewriter"; // Import typewriter
 import { FaSearch } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 import apiUrl from "../../Axios";
-
+import Loader from "../Loader";
 const Packages = ({ setFavourites }) => {
   const [trips, setTrips] = useState([]);
   const [allTrips, setAllTrips] = useState([]);
@@ -20,13 +20,14 @@ const Packages = ({ setFavourites }) => {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(true); // Loading state
+  // Loading state
   const [searchQuery, setSearchQuery] = useState(""); // Search query state
   const [favourites, setLocalFavourites] = useState([]); // Local state for favourites
   const [showAll, setShowAll] = useState(false); // State for showing all trips
   const itemsPerPage = 8; // 2 rows with 4 items each
   const [pageCount, setPageCount] = useState(0);
-
+  const[loading,setLoading]=useState(false);
+  
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -172,6 +173,7 @@ const Packages = ({ setFavourites }) => {
   return (
     <>
       <Navbar />
+      {loading && <Loader/>}
       <Carousel
         showThumbs={false}
         infiniteLoop

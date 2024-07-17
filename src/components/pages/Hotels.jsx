@@ -13,7 +13,7 @@ import { FaSearch } from "react-icons/fa";
 import apiUrl from '../../Axios';
 import ReactPaginate from 'react-paginate';
 import Loader from '../Loader';
-import { Spinner } from "@material-tailwind/react";
+// import { Spinner } from "@material-tailwind/react";
 const Hotels = ({ setFavourites }) => {
     const [hotels, setHotels] = useState([]);
     const [allHotels, setAllHotels] = useState([]);
@@ -189,11 +189,8 @@ const Hotels = ({ setFavourites }) => {
 
     return (
         <div>
-           {/* /* {true ? <div className='flex justify-center items-center h-96'>
-                <Spinner className='flex justify-center'/>
-              </div>  : */}
-           
-        <> 
+          {loading && <Loader/>}
+        
             <Navbar />
             <HotelCarousel />
             <h2 className="text-5xl mt-8 font-bold text-center text-[#600180] mb-8">Our Exclusive Hotels</h2>
@@ -317,7 +314,7 @@ const Hotels = ({ setFavourites }) => {
 
            
             <Footer />
-        </>
+        
 
         </div>
     );
