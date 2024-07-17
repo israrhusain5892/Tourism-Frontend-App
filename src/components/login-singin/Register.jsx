@@ -42,22 +42,22 @@ const Register = () => {
         // Name
         if (!formData.name) {
             formIsValid = false;
-            setLoading(false)
+            
             errors.name = "Name cannot be empty";
         } else if (formData.name.length < 3 || formData.name.length > 20) {
             formIsValid = false;
-            setLoading(false)
+            
             errors.name = "Name must be between 3 and 20 characters long";
         }
 
         // Mobile
         if (!formData.mobileNumber) {
             formIsValid = false;
-            setLoading(false)
+          
             errors.mobileNumber = "Mobile number cannot be empty";
         } else if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
             formIsValid = false;
-            setLoading(false)
+           
             errors.mobileNumber =
                 "Invalid mobile number. It should start with 9, 8, 7, or 6 and be 10 digits long";
         }
@@ -65,18 +65,18 @@ const Register = () => {
         // Email
         if (!formData.email) {
             formIsValid = false;
-            setLoading(false)
+           
             errors.email = "Email cannot be empty";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
             formIsValid = false;
-            setLoading(false)
+            
             errors.email = "Invalid email address";
         }
 
         // Password
         if (!formData.password) {
             formIsValid = false;
-            setLoading(false)
+           
             errors.password = "Password cannot be empty";
         } else if (
            
@@ -88,7 +88,7 @@ const Register = () => {
            
         ) {
             formIsValid = false;
-            setLoading(false);
+          
             errors.password =
                 "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character";
         }
@@ -96,10 +96,10 @@ const Register = () => {
         // Confirm Password
         if (formData.password !== formData.confirmPassword) {
             formIsValid = false;
-            setLoading(false);
+           
             errors.confirmPassword = "Passwords do not match";
         }
-        setLoading(false);
+        
         setErrors(errors);
         return formIsValid;
     };
@@ -138,7 +138,7 @@ const Register = () => {
     };
 
     const editEmail = () => {
-        setShowModal(false);
+        
     };
 
     const resendOtp = () => {
@@ -149,8 +149,9 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
+        
         if (handleValidation()) {
+            setLoading(true);
             try {
                 const response = await fetch(`${apiUrl}/auth/register`, {
                     method: "POST",
