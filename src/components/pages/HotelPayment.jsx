@@ -11,9 +11,9 @@ import { emailApiCall } from '../../Service/EmailService';
 import Swal from 'sweetalert2';
 import { PDFDownloadLink, pdf } from '@react-pdf/renderer';
 import Loader from '../Loader';
+import apiUrl from '../../Axios';
 import useRazorpay from "react-razorpay";
-// import { TicketContext } from './ContextProvider';
-import apiUrl from "../Axios";
+
 export const HotelTicketContext = React.createContext(null);
 function HotelPayment({res}) {
 
