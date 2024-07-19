@@ -13,6 +13,7 @@ import { PDFDownloadLink, pdf } from '@react-pdf/renderer';
 import Loader from '../Loader';
 import useRazorpay from "react-razorpay";
 // import { TicketContext } from './ContextProvider';
+import apiUrl from "../Axios";
 export const HotelTicketContext = React.createContext(null);
 function HotelPayment({res}) {
 
@@ -138,7 +139,7 @@ function HotelPayment({res}) {
 
         try {
             const amt = bookingDetails.bookingPrice;
-            const result = await axios.post(`http://localhost:8081/public/create-order/${amt}`);
+            const result = await axios.post(`${apiUrl}/public/create-order/${amt}`);
             const { amount, id: order_id, currency } = result.data;
 
             console.log(result);
@@ -182,7 +183,7 @@ function HotelPayment({res}) {
         };
 
         try {
-            const paymentResponse = await axios.post(`http://localhost:8081/public/update-order/${userId}/${hotelBookingId}`, hotelBookingData);
+            const paymentResponse = await axios.post(`${apiUrl}/public/update-order/${userId}/${hotelBookingId}`, hotelBookingData);
             if (paymentResponse) {
                 setPayment(paymentResponse.data);
             }
