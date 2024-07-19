@@ -26,20 +26,26 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
+import { useRef } from "react";
 import Adminmain from "./components/Admin/Adminmain";
 import 'remixicon/fonts/remixicon.css';
 import HotelBooking from './components/pages/HotelBookingpage'
 import HotelPayment from "./components/pages/HotelPayment";
-// import HotelTicket from "./components/pages/HotelTicket";
-
+import HotelTicket from "./components/pages/HotelTicket";
+import { ContextProvider } from "./components/pages/ContextProvider";
 const queryClient = new QueryClient();
 
 function App() {
   const [favourites, setFavourites] = useState([]);
-
+  const currentRef=useRef(null);
+  const [paymentData,setPaymentData]=useState(null);
+  const handleData=(newData)=>{
+    setPaymentData(newData);
+  }
   return (
     <>
       <QueryClientProvider client={queryClient}>
+        <ContextProvider>
         <Router>
           {/* <NavBar /> */}
           <div className="bg-[#f8fafc] w-full min-h-screen">
@@ -54,8 +60,8 @@ function App() {
               <Route path="/rentals" element={<Rentals />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/ticket" element={<HotelTicket  />}/>
               <Route path="/payment" element={<HotelPayment/>}/>
-              {/* <Route path="/ticket" element={<HotelTicket/>}/> */}
               <Route path="/admin">
                 <Route path="tripform" element={<TripForm />} />
                 <Route path="tripview" element={<TripViewPage />} />
@@ -70,6 +76,7 @@ function App() {
           </div>
           
         </Router>
+        </ContextProvider>
       </QueryClientProvider>
     </>
   );

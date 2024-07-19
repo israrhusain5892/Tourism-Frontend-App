@@ -45,3 +45,16 @@
 /* form css */
 
 /* Add this in your global CSS file */
+/* .razorpay-container iframe{
+     width: 7000px !important;
+     height: 300px !important;
+     max-height: 300px !important;
+    max-width: 10000px !important;
+}
+
+.razorpay-container .razorpay-checkout-frame{
+
+  width: 3000px !important;
+  height: 100% !important;
+
+} */

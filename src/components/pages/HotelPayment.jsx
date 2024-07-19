@@ -1,19 +1,67 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef,useContext } from 'react';
 import Navbar from "../Navbar/Navbar";
 import axios from 'axios';
 import HotelTicket from './HotelTicket';
 import { useLocation, useNavigate } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+// import '../../App.css';
 import ImageCompressor from 'image-compressor.js';
 import { emailApiCall } from '../../Service/EmailService';
 import Swal from 'sweetalert2';
+import { PDFDownloadLink, pdf } from '@react-pdf/renderer';
 import Loader from '../Loader';
+import useRazorpay from "react-razorpay";
+// import { TicketContext } from './ContextProvider';
+export const HotelTicketContext = React.createContext(null);
+function HotelPayment({res}) {
 
-function HotelPayment() {
+
+    const payment1=
+      {
+        "id": 22,
+        "receiptNo": "343nhgegyb",
+        "order_id": "677767hhyttrt",
+        "amount": 30000,
+        "paymentStatus": "Success",
+        "date": "2024-07-19T10:28:15.104+00:00",
+        "user": {
+          "userId": 14,
+          "name": "imran Husain",
+          "mobileNumber": "9897876656",
+          "email": "israrhusain866@gmail.com",
+          "password": "$2a$10$WAXfUdKVHsd9cI3Fk1caGeHhrEyFA0dCHThLu9EBmlVclmOqA7qM.",
+          "roles": [
+            {
+              "id": 2,
+              "name": "ROLE_USER"
+            }
+          ]
+        },
+        "bookingId": "HOTELBKID1",
+        "bookingStatus": "BOOKED",
+        "stayDuration": 1,
+        "hotelDetails": {
+          "id": 7,
+          "name": "Hotel Ashokal",
+          "type": "2 star",
+          "address": "Station Road, Warangal",
+          "city": "Warangal",
+          "state": "Telangana",
+          "rating": 2,
+          "price": 20000.0,
+          "url": "http://localhost:8081/public/hotel/download/7"
+        }
+      
+     }
+    const [Razorpay] = useRazorpay();
+    // const query=new URLSearchParams(useLocation.search);
+    // const ref=query.ref;
+    // console.log(ref);
+    // const { ticketRef, payment, setPayment } = useContext(TicketContext);
     const navigate = useNavigate();
     const [bookingDetails, setBookingDetails] = useState(null);
-    const [paymentData, setPaymentData] = useState(null);
+    const [payment, setPayment] = useState(null);
     const [loading, setLoading] = useState(false);
     const contentRef = useRef();
     const location = useLocation();
@@ -26,93 +74,29 @@ function HotelPayment() {
     }, [data]);
 
     useEffect(() => {
-        if (paymentData) {
-            setShow(true);
-            generateAndSendTicket();
+        if (payment) {
+            generateAndSendTicket()
         }
-    }, [paymentData]);
+    }, [payment]);
 
-    const dataURLToBlob = (dataurl) => {
-        const arr = dataurl.split(',');
-        const mime = arr[0].match(/:(.*?);/)[1];
-        const bstr = atob(arr[1]);
-        let n = bstr.length;
-        const u8arr = new Uint8Array(n);
-        while (n--) {
-            u8arr[n] = bstr.charCodeAt(n);
-        }
-        return new Blob([u8arr], { type: mime });
-    };
-
-    const compressImage = (imgData, quality) => {
-        return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = imgData;
-            img.onload = () => {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                canvas.width = img.width;
-                canvas.height = img.height;
-                ctx.drawImage(img, 0, 0);
-                canvas.toBlob(
-                    (blob) => {
-                        if (blob) {
-                            resolve(blob);
-                        } else {
-                            reject(new Error('Image compression failed'));
-                        }
-                    },
-                    'image/jpeg',
-                    quality
-                );
-            };
-            img.onerror = (error) => reject(error);
-        });
-    };
+    
+   
 
     const generateAndSendTicket = async () => {
         
         try {
-            const input = contentRef.current;
+            const ticketDocument=<HotelTicket payment={payment}/>
+           
 
-            if (!input) {
-                throw new Error('contentRef.current is null or undefined');
-            }
-
-            console.log('Content to capture:', input);
-
-            const canvas = await html2canvas(input, { scale: 2 });
-            let imgData = canvas.toDataURL('image/png');
-
-            // Compress the image
-            const compressedImage = await compressImage(imgData, 0.6);
-            const reader = new FileReader();
-            reader.readAsDataURL(compressedImage);
-            reader.onloadend = async () => {
-                imgData = reader.result;
-
-                const pdf = new jsPDF('p', 'mm', 'a4');
-                const imgProps = pdf.getImageProperties(imgData);
-                const pdfWidth = pdf.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-                pdf.addImage(imgData, 'PNG', 0, (pdf.internal.pageSize.getHeight() - pdfHeight) / 2, pdfWidth, pdfHeight);
-                const pdfBlob = pdf.output('blob');
-                console.log(pdfBlob);
-
-                // Convert the PDF Blob to Base64
-                const reader2 = new FileReader();
-                reader2.readAsDataURL(pdfBlob);
-                reader2.onloadend = async () => {
-                    
+          
                     const emailText = `
-                        Dear ${paymentData.user.name},
+                        Dear ${payment.user.name},
                     
-                        Congratulation !! on successfully Booking and We are pleased to confirm your booking at ${paymentData.hotelDetails.name}.
+                        Congratulation !! on successfully Booking and We are pleased to confirm your booking at ${payment.hotelDetails.name}.
                     
                         Booking Details:
-                        - Check-in Date: ${paymentData.date}
-                        - Check-out Date: ${paymentData.date+paymentData.stayDuration}
+                        - Check-in Date: ${payment.date}
+                        - Check-out Date: ${payment.date+payment.stayDuration}
                         -
                     
                         If you have any questions or need further assistance, please feel free to contact us on email helper23@gmail.com.
@@ -120,11 +104,11 @@ function HotelPayment() {
                         We look forward to welcoming you!
                     
                         Best regards,
-                        The ${paymentData.hotelDetails.name} Team
+                        The ${payment.hotelDetails.name} Team
                         `;
-                    
+                    const pdfBlob = await pdf(ticketDocument).toBlob();
                     const formData = new FormData();
-                    formData.append('to', `${paymentData.user.email}`);
+                    formData.append('to', `${payment.user.email}`);
                     formData.append('subject', `e-Ticket/Hotel Confirmation`);
                     formData.append('text', emailText);
                     formData.append('attachment', pdfBlob, 'HotelTicket.pdf');
@@ -133,8 +117,7 @@ function HotelPayment() {
                         const res = await emailApiCall(formData);
                         if (res.status === 200 || res.status === 201) {
                             setLoading(false);
-                            // setShow(false)
-                            const msg = 'Payment done successfully! Ticket has been sent to your email.';
+                            const msg = `Payment done successfully! Ticket has been sent to your email ${payment.user.email}`;
                             Swal.fire('Success', msg, 'success');
                             navigate("/hotels", { state: { msg } });
                         }
@@ -142,56 +125,51 @@ function HotelPayment() {
                         alert("Something went wrong while sending email.");
                         setLoading(false);
                     }
-                };
-            };
-        } catch (error) {
+                }
+            
+          catch (error) {
             console.error('Error generating ticket:', error);
         }
     };
 
-    const submitPayment = (e) => {
+    const submitPayment = async (e) => {
         e.preventDefault();
 
-        const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-        script.onerror = () => {
-            alert('Razorpay SDK failed to load. Are you online?');
-        };
-        script.onload = async () => {
-            try {
-                const amt = bookingDetails.bookingPrice;
-                const result = await axios.post(`http://localhost:8081/public/create-order/${amt}`);
-                const { amount, id: order_id, currency } = result.data;
 
-                console.log(result);
+        try {
+            const amt = bookingDetails.bookingPrice;
+            const result = await axios.post(`http://localhost:8081/public/create-order/${amt}`);
+            const { amount, id: order_id, currency } = result.data;
 
-                const options = {
-                    key: "rzp_test_m9GtDw9SM8uFLX", // Enter the Key ID generated from the Dashboard
-                    key_secret: "pvELoNMJuG107DKyjLapBhI7",
-                    amount: amount,
-                    currency: currency,
-                    name: "Indian Tourism",
-                    description: 'Booking Payment',
-                    order_id: order_id,
-                    handler: async function (response) {
-                        // Handle payment success
-                        setLoading(true);
-                        console.log(response);
-                        await UpdatePayment(result.data);
-                    },
-                    theme: {
-                        color: '#F37254'
-                    }
-                };
+            console.log(result);
 
-                const paymentObject = new window.Razorpay(options);
-                paymentObject.open();
-            } catch (error) {
-                alert('Error creating Razorpay order');
-                console.log(error);
-            }
-        };
-        document.body.appendChild(script);
+            const options = {
+                key: "rzp_test_m9GtDw9SM8uFLX", // Enter the Key ID generated from the Dashboard
+                key_secret: "pvELoNMJuG107DKyjLapBhI7",
+                amount: amount,
+                currency: currency,
+                name: "Indian Tourism",
+                description: 'Booking Payment',
+                // image:'https://img.freepik.com/free-photo/traveler-accessories-cup-tea-pink-background_23-2147950767.jpg?t=st=1721291423~exp=1721295023~hmac=c3b551172e792245e2494b3a66f214635f630df0ebc46e7862b4f388dee24b2d&w=740',
+                order_id: order_id,
+                handler: async function (response) {
+                    // Handle payment success
+                    setLoading(true);
+                    console.log(response);
+                    await UpdatePayment(result.data);
+                },
+                theme: {
+                    color: '#F37254'
+                }
+            };
+
+            const rzp1 = new Razorpay(options);
+            rzp1.open();
+        } catch (error) {
+            alert('Error creating Razorpay order');
+            console.log(error);
+        }
+       
     };
 
     async function UpdatePayment(response) {
@@ -206,7 +184,7 @@ function HotelPayment() {
         try {
             const paymentResponse = await axios.post(`http://localhost:8081/public/update-order/${userId}/${hotelBookingId}`, hotelBookingData);
             if (paymentResponse) {
-                setPaymentData(paymentResponse.data);
+                setPayment(paymentResponse.data);
             }
         } catch (error) {
             console.error('Error updating payment:', error);
@@ -242,12 +220,10 @@ function HotelPayment() {
                         </>
                     )}
                 </div>
-                <button onClick={generateAndSendTicket} className='bg-blue-700 px-5 py-3 text-white rounded'>
-                    Download Ticket
-                </button>
+                
                 <button onClick={submitPayment} className='px-6 py-2 mt-4 bg-blue-600 text-xl rounded-md text-white text-center block mx-auto'>Pay Now</button>
                 
-               <HotelTicket ref={contentRef} payment={paymentData} />
+                
         
             </div>
         </div>
