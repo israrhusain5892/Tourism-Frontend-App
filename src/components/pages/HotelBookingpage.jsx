@@ -78,7 +78,7 @@ const BookNow = () => {
     <>
      {loading && <Loader/>} 
       <Navbar />
-      <div className="container mx-auto mt-20 p-16 flex flex-col lg:flex-row bg-white shadow-lg rounded-lg">
+      <div className="container mx-auto mt-20  p-16 flex flex-col lg:flex-row bg-white shadow-lg rounded-lg">
         <div className="w-full lg:w-1/2">
           <img
             src={hotel.url || 'https://via.placeholder.com/300x200?text=No+Image'}
@@ -86,7 +86,7 @@ const BookNow = () => {
             className="w-full h-full object-cover rounded-lg"
           />
         </div>
-        <div className="w-full lg:w-1/2 p-6">
+        <div className="w-full lg:w-1/2 p-6 ">
           <h2 className="text-2xl font-bold mb-2">{hotel.name}</h2>
           <p className="text-gray-600 mb-4">{hotel.address}</p>
           <form onSubmit={handleSubmit} className="space-y-4">

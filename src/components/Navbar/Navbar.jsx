@@ -44,7 +44,7 @@ const NavBar = () => {
             'You have been logged out.',
             'success'
           );
-          navigate("/login");
+          navigate("/");
         });
       }
     });

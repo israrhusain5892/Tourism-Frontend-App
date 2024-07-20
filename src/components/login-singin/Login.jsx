@@ -6,7 +6,7 @@ import { doLogin } from '../Auth';
 import apiUrl from '../../Axios';
 import Swal from "sweetalert2";
 import NavBar from '../Navbar/Navbar';
-
+import Loader from '../Loader';
 const LoginForm = () => {
     const [usernameOrEmail, setUsernameOrEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ const LoginForm = () => {
     const [message, setMessage] = useState('');
     const [generatedOtp, setGeneratedOtp] = useState('');
     const navigate = useNavigate()
-
+     const[loading,setLoading]=useState(false)
     const [loginForm, setLoginForm] = useState({
         email: '',
         password: ''
@@ -27,11 +27,13 @@ const LoginForm = () => {
 
 
     const handleLogin = async () => {
+          setLoading(true)
         try {
+
             const response = await axios.post(`${apiUrl}/auth/login`, loginForm);
 
             if (response.status === 200 || response.status === 202) {
-                // alert('Login successful');
+                      setLoading(false)
                 Swal.fire({
                     icon: 'success',
                     title: 'Signed in successfully',
@@ -136,6 +138,7 @@ const LoginForm = () => {
 
     return (
         <section className="h-full flex flex-wrap items-center justify-center lg:justify-between">
+           {loading && <Loader/> } 
             <NavBar/>
             <div className="shrink-1 mb-2 mt-12 grow-0 basis-auto md:mb-0 md:w-9/12 lg:w-6/12 xl:w-6/12">
                 <img src={loginimg} className="w-full" alt="Sample image" />

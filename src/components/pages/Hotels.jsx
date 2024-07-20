@@ -13,6 +13,7 @@ import { FaSearch } from "react-icons/fa";
 import apiUrl from '../../Axios';
 import ReactPaginate from 'react-paginate';
 import Loader from '../Loader';
+import { getCurrentUserDetail,isLogin } from '../Auth';
 // import { Spinner } from "@material-tailwind/react";
 const Hotels = ({ setFavourites }) => {
     const [hotels, setHotels] = useState([]);
@@ -26,6 +27,16 @@ const Hotels = ({ setFavourites }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const navigate = useNavigate();
     const [selectedHotel, setSelectedHotel] = useState(null);
+
+    const [login, setLogin] = useState(false);
+  
+    useEffect(() => {
+     
+      setLogin(isLogin());
+
+    }, [login]);
+
+
     const [formData, setFormData] = useState({
         name: '',
         mobileNumber: '',
@@ -121,7 +132,14 @@ const Hotels = ({ setFavourites }) => {
     };
 
     const handleBookNow = (hotel) => {
-        navigate('/Booknow', { state: { hotel } });
+
+        if(login){
+            navigate('/Booknow', { state: { hotel } });
+        }
+        else{
+            navigate("/login")
+        }
+       
     };
 
 
