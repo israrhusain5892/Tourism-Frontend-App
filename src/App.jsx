@@ -33,6 +33,8 @@ import HotelBooking from './components/pages/HotelBookingpage'
 import HotelPayment from "./components/pages/HotelPayment";
 import HotelTicket from "./components/pages/HotelTicket";
 import { ContextProvider } from "./components/pages/ContextProvider";
+import PasswordForgot from "./components/login-singin/PasswordForgot";
+import PasswordResetPage from "./components/login-singin/PasswordResetPage";
 const queryClient = new QueryClient();
 
 function App() {
@@ -62,6 +64,8 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/ticket" element={<HotelTicket  />}/>
               <Route path="/payment" element={<HotelPayment/>}/>
+              <Route path="/forgot" element={<PasswordForgot/>}/>
+              <Route path="/passwordReset" element={<PasswordResetPage/>}/>
               <Route path="/admin">
                 <Route path="tripform" element={<TripForm />} />
                 <Route path="tripview" element={<TripViewPage />} />
@@ -71,6 +75,7 @@ function App() {
                 <Route path="transportform" element={<TransportForm />} />
                 <Route path="transportation" element={<BusViewPage />} />
                 <Route path="busbookingview" element={<BusBookingViewPage />} />
+               
               </Route>
             </Routes>
           </div>
