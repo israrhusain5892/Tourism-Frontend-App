@@ -35,6 +35,7 @@ import HotelTicket from "./components/pages/HotelTicket";
 import { ContextProvider } from "./components/pages/ContextProvider";
 import PasswordForgot from "./components/login-singin/PasswordForgot";
 import PasswordResetPage from "./components/login-singin/PasswordResetPage";
+import UserView from "./components/Admin/UserView";
 const queryClient = new QueryClient();
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
                 <Route path="transportform" element={<TransportForm />} />
                 <Route path="transportation" element={<BusViewPage />} />
                 <Route path="busbookingview" element={<BusBookingViewPage />} />
+                <Route path="userview" element={<UserView />} />
                
               </Route>
             </Routes>

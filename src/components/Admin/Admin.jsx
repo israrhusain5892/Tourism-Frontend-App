@@ -22,6 +22,7 @@ function Admin({ children }) {
   const [hotelView, setHotelView] = useState(false);
   const [bookingView, setBookingView] = useState(false);
   const [payView, setPayView] = useState(false);
+  const [userView, setUserView] = useState(false);
   const menu = [
     {
       label: 'Add Trip',
@@ -356,6 +357,21 @@ function Admin({ children }) {
                   <div className='hover:bg-blue-500'>
                     <i className="ri-checkbox-blank-circle-fill"></i>
                     <Link className='px-2 font-semibold'>View Payments</Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div>
+              <div className='py-1 px-2 transition hover:bg-blue-500 duration-200 text-white'>
+               <i class="ri-id-card-fill text-lg px-2"></i>
+                <Link onClick={() => setUserView(!userView)} className='text-lg font-semibold'>User </Link>
+              </div>
+              {userView && (
+                <div className='text-white ml-8'>
+                  <div className='hover:bg-blue-500'>
+                    <i className="ri-checkbox-blank-circle-fill"></i>
+                    <Link to="/admin/userview" className='px-2 font-semibold'>View Users</Link>
                   </div>
                 </div>
               )}

@@ -6,8 +6,8 @@ import apiUrl from '../../Axios';
 
 import Admin from './Admin';
 
-function TripViewPage() {
-  const [trips, setTrips] = useState([]);
+function UserView() {
+  const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   const [states, setStates] = useState([]);
@@ -20,23 +20,23 @@ function TripViewPage() {
   const itemsPerPage = 6;
 
   useEffect(() => {
-    fetchTrips();
+    fetchUsers();
     fetchStates();
     fetchCities();
     fetchCategories();
   }, []);
 
-  const fetchTrips = async () => {
+  const fetchUsers = async () => {
     try {
-      const response = await axios.get(`${apiUrl}/public/trip/`);
-      setTrips(response.data);
+      const response = await axios.get(`${apiUrl}/public/user/get`);
+      setUsers(response.data);
       setLoading(false);
     } catch (error) {
       console.error('Error fetching trips:', error);
       setLoading(false);
     }
   };
-
+console.log(users)
   const fetchStates = async () => {
     try {
       const response = await axios.get(`${apiUrl}/public/state/`);
@@ -105,7 +105,7 @@ function TripViewPage() {
   };
 
   const search = () => {
-    const filteredData = trips.filter((trip) =>
+    const filteredData = users.filter((trip) =>
       trip.tripName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       trip.stateName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       trip.cityName.toLowerCase().includes(searchTerm.toLowerCase())
@@ -134,7 +134,7 @@ function TripViewPage() {
   };
 
   const handlePageChange = (direction) => {
-    if (direction === 'next' && currentPage < Math.ceil(trips.length / itemsPerPage)) {
+    if (direction === 'next' && currentPage < Math.ceil(users.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     } else if (direction === 'prev' && currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -142,9 +142,9 @@ function TripViewPage() {
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage + 1;
-  const endIndex = Math.min(currentPage * itemsPerPage, trips.length);
-  const totalItems = trips.length;
-  const paginatedTrips = trips.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const endIndex = Math.min(currentPage * itemsPerPage,  users.length);
+  const totalItems =  users.length;
+  const paginatedTrips = users.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <Admin>
@@ -186,12 +186,12 @@ function TripViewPage() {
               <RiArrowLeftSLine className="inline-block mr-1" />
             </button>
             <span className="px-4 py-2">
-              Page {currentPage} of {Math.ceil(trips.length / itemsPerPage)}
+              Page {currentPage} of {Math.ceil(users.length / itemsPerPage)}
             </span>
             <button
               className="text-gray rounded"
               onClick={() => handlePageChange('next')}
-              disabled={currentPage === Math.ceil(trips.length / itemsPerPage)}
+              disabled={currentPage === Math.ceil(users.length / itemsPerPage)}
             >
               <RiArrowRightSLine className="inline-block ml-1" />
             </button>
@@ -211,32 +211,22 @@ function TripViewPage() {
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Trip Name
+                    User Name
                   </th>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Trip Price
+                    Mobile No.
                   </th>
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
-                    Trip Photo
+                    Email
                   </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    State
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
-                    City
-                  </th>
+                 
+                 
                   <th
                     scope="col"
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -254,23 +244,17 @@ function TripViewPage() {
                   </tr>
                 ) : (
                   paginatedTrips.map((element, index) => (
-                    <tr key={element.tripId}>
+                    <tr key={element.userId}>
                       <td className="px-6 py-4 whitespace-nowrap">{index + 1 + (currentPage - 1) * itemsPerPage}</td>
-                      <td className="px-6 py-4 whitespace-nowrap">{element.tripName}</td>
-                      <td className="px-6 py-4 whitespace-nowrap">{element.tripPrice}</td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <img
-                          src={element.url}
-                          alt={element.tripName}
-                          className="w-12 h-12 object-cover rounded"
-                        />
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">{element.stateName}</td>
-                      <td className="px-6 py-4 whitespace-nowrap">{element.cityName}</td>
+                      <td className="px-6 py-4 whitespace-nowrap">{element.name}</td>
+                      <td className="px-6 py-4 whitespace-nowrap">{element.mobileNumber}</td>
+                      
+                      <td className="px-6 py-4 whitespace-nowrap">{element.email}</td>
+                    
                       <td className="px-6 py-4 whitespace-nowrap">
                         <button
                           className="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-700"
-                          onClick={() => confirmDeleteTrip(element.tripId)}
+                          onClick={() => confirmDeleteTrip(element.userId)}
                         >
                           Delete
                         </button>
@@ -296,12 +280,12 @@ function TripViewPage() {
               <RiArrowLeftSLine className="inline-block mr-1" />
             </button>
             <span className="px-4 py-2">
-              Page {currentPage} of {Math.ceil(trips.length / itemsPerPage)}
+              Page {currentPage} of {Math.ceil(users.length / itemsPerPage)}
             </span>
             <button
               className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
               onClick={() => handlePageChange('next')}
-              disabled={currentPage === Math.ceil(trips.length / itemsPerPage)}
+              disabled={currentPage === Math.ceil(users.length / itemsPerPage)}
             >
               <RiArrowRightSLine className="inline-block ml-1" />
             </button>
@@ -431,4 +415,4 @@ function TripViewPage() {
   );
 }
 
-export default TripViewPage;
+export default UserView;
